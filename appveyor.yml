@@ -4,8 +4,8 @@ build: Script
 clone_folder: C:\project\wslu
 install:
   - git submodule update --init --recursive
-#  - ps: wsl -u root apt-get update
-#  - ps: wsl -u root DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential nodejs npm make
+  - ps: wsl -u root apt-get update
+  - ps: wsl -u root DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential nodejs npm make git
 build_script:
 #  - ps: wsl --help
 #  -u user, -- args
