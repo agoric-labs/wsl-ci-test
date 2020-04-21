@@ -17,8 +17,9 @@ build_script:
   - ps: wsl -- ls -al
 #  - ps: wsl -- bash ./install-nvm.sh
 #  - ps: wsl -- nvm current
-  - ps: wsl -- ls /mnt/c/Program Files/nodejs
+  - ps: wsl -- ls "/mnt/c/*/nodejs"
   - ps: wsl -- ls "/mnt/c/Program\ Files\ (x86)/nodejs"
+  - ps: wsl -- ls "/mnt/c/Program\ Files/nodejs"
   - ps: wsl -- node --version
   - ps: wsl -- yarn --version
 test_script:
