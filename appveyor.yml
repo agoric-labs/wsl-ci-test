@@ -20,6 +20,7 @@ build_script:
   - ps: wsl -- ls "/mnt/c/*/nodejs"
 #  - ps: wsl -- ls "/mnt/c/Program\ Files\ (x86)/nodejs"
 #  - ps: wsl -- ls "/mnt/c/Program\ Files/nodejs"
+  - ps: wsl -- ls "/mnt/c/*/Yarn/bin"
   - ps: wsl -- bash ./do.sh
   - ps: wsl -- node --version
   - ps: wsl -- yarn --version
