@@ -13,7 +13,11 @@
 #npm --version
 
 echo "this goes to stdout" >&1
+# stderr on appveyor/WSL is displayed with a bright red background and
+# injects six lines of random context information just to make you think
+# it failed
 echo "this goes to stderr" >&2
+
 type git
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -23,3 +27,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
 ls -l ~/.nvm
 
+echo "post-install printenv in new shell:"
+echo printenv |bash
+
+exit 0
