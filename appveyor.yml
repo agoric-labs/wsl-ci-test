@@ -7,7 +7,7 @@ install:
 #  - ps: wsl -u root apt-get update
 #  - ps: wsl -u root DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential nodejs npm make git
 build_script:
-#  - ps: wsl --help
+  - ps: wsl --help
 #  -u user, -- args
 #  - ps: wsl --list --verbose
   - ps: wsl -- ls -l /mnt/c/windows/system32/wsl.exe
