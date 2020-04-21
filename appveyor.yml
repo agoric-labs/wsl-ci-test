@@ -11,6 +11,7 @@ build_script:
   - ps: wsl -- uname -a
 #  - ps: wsl -u root make install
   - ps: wsl -- cat /etc/apt/sources.list
-  - ps: wsl -- node --version
+  - ps: wsl -- 'wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash'
+  - ps: wsl -- nvm current
 test_script:
 #  - ps: wsl make test
