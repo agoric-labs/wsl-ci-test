@@ -7,11 +7,15 @@ install:
 #  - ps: wsl -u root apt-get update
 #  - ps: wsl -u root DEBIAN_FRONTEND=noninteractive apt-get install -y bc make imagemagick gzip groff
 build_script:
-  - ps: wsl --help
+#  - ps: wsl --help
+#  -u user, -- args
   - ps: wsl -- uname -a
 #  - ps: wsl -u root make install
-  - ps: wsl -- cat /etc/apt/sources.list
-  - ps: wsl -- 'wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash'
+#  - ps: wsl -- cat /etc/apt/sources.list
+#   it runs bionic
+  - ps: wsl -- pwd
+  - ps: wsl -- ls -al
+  - ps: wsl -- bash ./install-nvm.sh
   - ps: wsl -- nvm current
 test_script:
 #  - ps: wsl make test
