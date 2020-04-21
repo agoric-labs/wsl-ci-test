@@ -7,10 +7,10 @@ install:
 #  - ps: wsl -u root apt-get update
 #  - ps: wsl -u root DEBIAN_FRONTEND=noninteractive apt-get install -y bc make imagemagick gzip groff
 build_script:
-  - ps: wsl --version
-  - ps: wsl uname -a
+  - ps: wsl --help
+  - ps: wsl -- uname -a
 #  - ps: wsl -u root make install
-  - ps: wsl cat /etc/apt/sources.list
-  - ps: node --version
+  - ps: wsl -- cat /etc/apt/sources.list
+  - ps: wsl -- node --version
 test_script:
 #  - ps: wsl make test
