@@ -28,6 +28,6 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ls -l ~/.nvm
 
 echo "post-install printenv in new shell:"
-echo printenv |bash
+echo printenv |bash -i
 
 exit 0
