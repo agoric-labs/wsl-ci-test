@@ -11,6 +11,7 @@ build_script:
 #  -u user, -- args
 #  - ps: wsl --list --verbose
   - ps: wsl -- ls -l /mnt/c/windows/system32/wsl.exe
+  - ps: (Get-Item C:\Windows\System32\wsl.exe).VersionInfo.FileVersion
   - ps: wsl --version
   - ps: wsl -- uname -a
 #  - ps: wsl -u root make install
