@@ -9,9 +9,9 @@ install:
 build_script:
 #  - ps: wsl --help
 #  -u user, -- args
-  - ps: wsl --list --verbose
-  - ps: wsl --version
+#  - ps: wsl --list --verbose
   - ps: wsl -- ls -l /mnt/c/windows/system32/wsl.exe
+  - ps: wsl --version
   - ps: wsl -- uname -a
 #  - ps: wsl -u root make install
 #  - ps: wsl -- cat /etc/apt/sources.list
