@@ -11,3 +11,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: test wsl
       run: wsl help
+    - name: test bash
+      run: bash --version
