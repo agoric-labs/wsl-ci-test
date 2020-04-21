@@ -15,7 +15,7 @@ build_script:
  # - ps: wsl --version
   - ps: wsl -- uname -a
 #  - ps: wsl -u root make install
-  - ps: wsl -- cat /etc/apt/sources.list
+#  - ps: wsl -- cat /etc/apt/sources.list
 #   it runs bionic
   - ps: wsl -- pwd
   - ps: wsl -- ls -al

@@ -117,6 +117,12 @@ Invalid command line option: --version
 ** mitigate by truncating $PATH
 * bionic has node-8, ancient
 * trying to install nvm with curl|bash
+** wsl -- bash ./install-nvm.sh
+** "Command executed with exception: Cloning into '/home/appveyor/.nvm'..."
+** which is what it was doing when the stderr was emitted
+* 
+* PWD is /mnt/c/project/wslu
+* uid/gid is appveyor/appveyor
 * 
 * all stderr gets displayed with bright red background
   and six injected lines of random context information to make you think it
