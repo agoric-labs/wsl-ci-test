@@ -12,6 +12,10 @@
 #echo "-- doing npm --version"
 #npm --version
 
+echo "this goes to stdout" >&1
+echo "this goes to stderr" >&2
+type git
+
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 echo "-- doing wget install"
