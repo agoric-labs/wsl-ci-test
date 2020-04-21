@@ -4,11 +4,13 @@ build: Script
 clone_folder: C:\project\wslu
 install:
   - git submodule update --init --recursive
-  - ps: wsl -u root apt-get update
-  - ps: wsl -u root DEBIAN_FRONTEND=noninteractive apt-get install -y bc make imagemagick gzip groff
+#  - ps: wsl -u root apt-get update
+#  - ps: wsl -u root DEBIAN_FRONTEND=noninteractive apt-get install -y bc make imagemagick gzip groff
 build_script:
-  - ps: wsl make
-  - ps: wsl -u root make install
   - ps: wsl --version
+  - ps: wsl uname -a
+#  - ps: wsl -u root make install
+  - ps: wsl cat /etc/apt/sources.list
+  - ps: node --version
 test_script:
-  - ps: wsl make test
+#  - ps: wsl make test
