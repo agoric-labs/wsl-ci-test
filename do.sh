@@ -28,7 +28,7 @@ echo "running nvm current"
 nvm current
 
 echo "running nvm use v13.11.0"
-nvm install v13.11.0
+./no-stderr nvm install v13.11.0
 
 echo "running nvm current"
 nvm current
