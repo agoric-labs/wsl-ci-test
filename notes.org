@@ -1,4 +1,6 @@
 * Appveyor's "WSL" install.
+* "image: Vsual Studio 2019"
+* uname -a: Linux appveyor-vm 4.4.0-17763-Microsoft #864-Microsoft Thu Nov 07 15:22:00 PST 2019 x86_64 x86_64 x86_64 GNU/Linux
 * wsl --help emits:
 wsl --help
 Usage: wsl.exe [option] ...
@@ -132,6 +134,7 @@ Invalid command line option: --version
 * all stderr gets displayed with bright red background
   and six injected lines of random context information to make you think it
   failed
+* 
 * 
 * switching to "image: Ubuntu"
 ** uname -a: Linux appveyor-vm 5.3.0-46-generic #38~18.04.1-Ubuntu SMP Tue Mar 31 04:17:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
