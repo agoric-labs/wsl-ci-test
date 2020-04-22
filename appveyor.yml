@@ -28,7 +28,7 @@ build_script:
 #  - ps: wsl -- ls "/mnt/c/*/Yarn/bin"
   - ps: wsl -- bash ./install-nvm.sh
 #  - ps: wsl -- nvm current
-  - ps: wsl -- bash -i ./do.sh
+  - ps: wsl -- ./no-stderr bash -i ./do.sh
 #  - ps: wsl -- node --version
 #  - ps: wsl -- yarn --version
 test_script:
