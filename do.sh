@@ -35,4 +35,13 @@ nvm use v13.11.0
 echo "running nvm current"
 nvm current
 
+npm install -g yarn
+
+git clone https://github.com/Agoric/agoric-sdk.git
+
+cd agoric-sdk
+yarn
+cd packages/swing-store-lmdb
+yarn test
+
 exit 0
