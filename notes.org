@@ -124,6 +124,7 @@ Invalid command line option: --version
 ** install.sh exits with rc 0
 ** but something inside it makes appveyor or wsl think it failed
 ** appveyor refuses to run the following step
+* something believes that any stderr is a failure
 * 
 * PWD is /mnt/c/project/wslu
 * uid/gid is appveyor/appveyor
