@@ -29,6 +29,7 @@ build_script:
   - ps: wsl -- bash ./install-nvm.sh
 #  - ps: wsl -- nvm current
   - ps: wsl -- ./no-stderr bash -i ./do.sh
+  - ps: wsl -- ./no-stderr cd packages/swing-store-lmdb && yarn test
 #  - ps: wsl -- ls -al
 #  - ps: wsl -- node --version
 #  - ps: wsl -- yarn --version

@@ -46,7 +46,7 @@ git clone https://github.com/Agoric/agoric-sdk.git
 
 cd agoric-sdk
 yarn
-cd packages/swing-store-lmdb
-yarn test
+#cd packages/swing-store-lmdb
+#yarn test
 
 exit 0
