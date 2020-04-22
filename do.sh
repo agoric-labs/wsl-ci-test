@@ -21,6 +21,9 @@
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
+apt update
+apt install build-essential make
+
 #echo "bashrc"
 #cat ~/.bashrc
 
