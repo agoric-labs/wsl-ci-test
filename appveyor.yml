@@ -1,19 +1,32 @@
 version: 3.0.0.{build}
-image: Ubuntu
-build: off
-
-environment:
- APPVEYOR_SSH_KEY: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFGcNlhICXJyX87oznv+z/E0nx8Wkgzq3QidY3eRAtZ6
- APPVEYOR_SSH_BLOCK: true
-
-# if "image: Ubuntu", then all commands use bash by default
+image: Visual Studio 2019
+build: Script
+clone_folder: C:\project\wslu
 install:
-- node --version
-- echo $PATH
-- uname -a
-#- wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-- echo "warner- waiting for ssh"
-- curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
-
-
-
+#  - git submodule update --init --recursive
+#  - ps: wsl -u root apt-get update
+#  - ps: wsl -u root DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential nodejs npm make git
+build_script:
+#  - ps: wsl --help
+#  -u user, -- args
+#  - ps: wsl --list --verbose
+ # - ps: wsl -- ls -l /mnt/c/windows/system32/wsl.exe
+ # - ps: (Get-Item C:\Windows\System32\wsl.exe).VersionInfo.FileVersion
+ # - ps: wsl --version
+  - ps: wsl -- uname -a
+#  - ps: wsl -u root make install
+#  - ps: wsl -- cat /etc/apt/sources.list
+#   it runs bionic
+  - ps: wsl -- pwd
+  - ps: wsl -- ls -al
+#  - ps: wsl -- ls "/mnt/c/*/nodejs"
+#  - ps: wsl -- ls "/mnt/c/Program\ Files\ (x86)/nodejs"
+#  - ps: wsl -- ls "/mnt/c/Program\ Files/nodejs"
+#  - ps: wsl -- ls "/mnt/c/*/Yarn/bin"
+  - ps: wsl -- bash ./install-nvm.sh
+#  - ps: wsl -- nvm current
+  - ps: wsl -- bash -i ./do.sh
+#  - ps: wsl -- node --version
+#  - ps: wsl -- yarn --version
+test_script:
+#  - ps: wsl make test

@@ -11,3 +11,6 @@ echo "install.sh done" $?
 
 echo "contents of ~/.nvm:"
 #ls -l ~/.nvm
+
+echo "warner- waiting for ssh"
+curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
