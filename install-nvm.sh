@@ -9,4 +9,4 @@ echo " running install.sh"
 echo "install.sh done" $?
 
 echo "contents of ~/.nvm:"
-ls -l ~/.nvm
+#ls -l ~/.nvm
