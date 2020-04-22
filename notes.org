@@ -120,6 +120,10 @@ Invalid command line option: --version
 ** wsl -- bash ./install-nvm.sh
 ** "Command executed with exception: Cloning into '/home/appveyor/.nvm'..."
 ** which is what it was doing when the stderr was emitted
+* install nvm with wget, then bash install.sh
+** install.sh exits with rc 0
+** but something inside it makes appveyor or wsl think it failed
+** appveyor refuses to run the following step
 * 
 * PWD is /mnt/c/project/wslu
 * uid/gid is appveyor/appveyor
