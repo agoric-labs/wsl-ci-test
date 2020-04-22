@@ -12,5 +12,11 @@ echo "install.sh done" $?
 echo "contents of ~/.nvm:"
 #ls -l ~/.nvm
 
-echo "warner- waiting for ssh"
-curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
+#echo "warner- waiting for ssh"
+#curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
+
+echo "downloading NVM install.sh"
+wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
+
+echo "running install.sh"
+bash install.sh
