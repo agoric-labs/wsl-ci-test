@@ -126,14 +126,19 @@ Invalid command line option: --version
 ** install.sh exits with rc 0
 ** but something inside it makes appveyor or wsl think it failed
 ** appveyor refuses to run the following step
+* all stderr gets displayed with bright red background
+  and six injected lines of random context information to make you think it
+  failed
 * something believes that any stderr is a failure
+* 'wsl -- write-to-stderr' stops the build
+* but 'wsl -- command-with-nonzero-rc' doesn't stop build
+* overcome with 'no-stderr' script:
+** if "$@" 2>&1; then echo "good"; else echo "bad rc=$?" >&2; fi
+** ./no-stderr COMMAND ARG ARG
 * 
 * PWD is /mnt/c/project/wslu
 * uid/gid is appveyor/appveyor
 * 
-* all stderr gets displayed with bright red background
-  and six injected lines of random context information to make you think it
-  failed
 * 
 * 
 * switching to "image: Ubuntu"
