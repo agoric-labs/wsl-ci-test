@@ -19,4 +19,4 @@ echo "downloading NVM install.sh"
 wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
 
 echo "running install.sh"
-bash install.sh
+bash install.sh 2>&1
