@@ -16,7 +16,7 @@ echo "contents of ~/.nvm:"
 #curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 
 echo "downloading NVM install.sh"
-wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
+wget -q https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh 2>&1
 
 echo "running install.sh"
 bash install.sh 2>&1
