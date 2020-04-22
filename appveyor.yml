@@ -1,3 +1,6 @@
+environment:
+  APPVEYOR_SSH_KEY: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFGcNlhICXJyX87oznv+z/E0nx8Wkgzq3QidY3eRAtZ6 warner@mini
+  APPVEYOR_SSH_BLOCK: true
 version: 3.0.0.{build}
 image: Visual Studio 2019
 build: Script
