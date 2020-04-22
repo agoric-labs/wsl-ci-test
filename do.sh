@@ -24,7 +24,13 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 #echo "bashrc"
 #cat ~/.bashrc
 
-echo "nvm current"
+echo "running nvm current"
+nvm current
+
+echo "running nvm use v13.11.0"
+nvm use v13.11.0
+
+echo "running nvm current"
 nvm current
 
 exit 0
