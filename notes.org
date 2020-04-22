@@ -132,3 +132,9 @@ Invalid command line option: --version
 * all stderr gets displayed with bright red background
   and six injected lines of random context information to make you think it
   failed
+* 
+* switching to "image: Ubuntu"
+** uname -a: Linux appveyor-vm 5.3.0-46-generic #38~18.04.1-Ubuntu SMP Tue Mar 31 04:17:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+** $PATH: /home/appveyor/.rvm/gems/ruby-2.7.0/bin:/home/appveyor/.rvm/gems/ruby-2.7.0@global/bin:/home/appveyor/.rvm/rubies/ruby-2.7.0/bin:/usr/lib/jvm/java-9-openjdk-amd64/bin:/home/appveyor/.gvm/pkgsets/go1.14/global/bin:/home/appveyor/.gvm/gos/go1.14/bin:/home/appveyor/.gvm/pkgsets/go1.14/global/overlay/bin:/home/appveyor/.gvm/bin:/home/appveyor/.gvm/bin:/home/appveyor/.nvm/versions/node/v8.17.0/bin:/opt/octopus:/opt/appveyor/build-agent:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/appveyor/.dotnet/tools:/home/appveyor/.rvm/bin:/opt/mssql-tools/bin:/home/appveyor/vcpkg
+*** no /mnt/c stuff
+** 

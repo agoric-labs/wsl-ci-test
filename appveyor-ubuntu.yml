@@ -1,0 +1,10 @@
+version: 3.0.0.{build}
+image: Ubuntu
+build: off
+
+# if "image: Ubuntu", then all commands use bash by default
+install:
+- node --version
+- echo $PATH
+- uname -a
+- wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
