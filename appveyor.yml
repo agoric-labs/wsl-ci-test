@@ -26,7 +26,8 @@ build_script:
 #  - ps: wsl -- ls "/mnt/c/Program\ Files\ (x86)/nodejs"
 #  - ps: wsl -- ls "/mnt/c/Program\ Files/nodejs"
 #  - ps: wsl -- ls "/mnt/c/*/Yarn/bin"
-  - ps: wsl -- bash ./install-nvm.sh
+  - ps: wsl -- ./no-stderr ./install-go.sh
+  - ps: wsl -- ./no-stderr ./install-nvm.sh
 #  - ps: wsl -- nvm current
   - ps: wsl -- ./no-stderr bash -i ./do.sh
   - ps: wsl -- ./no-stderr ./run-test.sh

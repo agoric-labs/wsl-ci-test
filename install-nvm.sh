@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/bin/bash -ie
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 type git
 
 echo "downloading NVM install.sh"
-wget -q https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh 2>&1
+wget -q https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
 
 echo "running install.sh"
-bash install.sh 2>&1
+bash install.sh
 echo "install.sh done" $?
 
 #echo "this goes to stderr" >&2
