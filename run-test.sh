@@ -1,4 +1,6 @@
 #!/bin/bash -ie
 
-cd packages/swing-store-lmdb
+#git checkout origin/950-fix-lmdb-crash-on-wls
+
+cd agoric-sdk/packages/swing-store-lmdb
 yarn test
