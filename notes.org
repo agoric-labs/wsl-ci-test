@@ -131,10 +131,13 @@ Invalid command line option: --version
   failed
 * something believes that any stderr is a failure
 * 'wsl -- write-to-stderr' stops the build
+** dean says that's a powershell thing
 * but 'wsl -- command-with-nonzero-rc' doesn't stop build
 * overcome with 'no-stderr' script:
 ** if "$@" 2>&1; then echo "good"; else echo "bad rc=$?" >&2; fi
 ** ./no-stderr COMMAND ARG ARG
+* `wsl -- COMMAND' cannot contain &&
+* to get NVM, need bash -i
 * 
 * PWD is /mnt/c/project/wslu
 * uid/gid is appveyor/appveyor
