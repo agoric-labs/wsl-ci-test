@@ -23,7 +23,7 @@ jobs:
           github.git.updateRef({owner: 'agoric-labs', 
                                 repo: 'wsl-ci-test',
                                 ref:  'hackathon',
-                                sha: github.git.getRef({
+                                sha: await github.git.getRef({
                                    owner: 'agoric-labs',
                                    repo: 'wsl-ci-test',
                                    ref: 'heads/master',
