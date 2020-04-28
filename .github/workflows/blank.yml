@@ -20,12 +20,12 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          github.updateRef({owner: 'agoric-labs', 
-                            repo: 'wsl-ci-test',
-                            ref:  'hackathon',
-                            sha: github.getRef({
-                               owner: 'agoric-labs',
-                               repo: 'wsl-ci-test',
-                               ref: 'heads/master',
-                            }),
-                          });
+          github.git.updateRef({owner: 'agoric-labs', 
+                                repo: 'wsl-ci-test',
+                                ref:  'hackathon',
+                                sha: github.git.getRef({
+                                   owner: 'agoric-labs',
+                                   repo: 'wsl-ci-test',
+                                   ref: 'heads/master',
+                                }),
+                              });
