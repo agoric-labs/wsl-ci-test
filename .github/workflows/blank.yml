@@ -23,4 +23,4 @@ jobs:
           let repo = { owner: 'agoric-labs', repo: 'wsl-ci-test' };
           let f = await github.git.getRef({ref: 'heads/master', ...repo});
           let sha = f.data.object.sha;
-          await github.git.updateRef({ref:  'hackathon', sha, ...repo});
+          await github.git.updateRef({ref:  'heads/hackathon', sha, ...repo});
