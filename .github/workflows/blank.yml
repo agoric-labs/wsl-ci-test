@@ -1,21 +1,16 @@
-# This is a basic workflow to help you get started with Actions
+# when 'master' changes, update the 'hackathon' branch to match
 
-name: update-branch
+name: update-hackathon-branch
 
+# *only* run upon changes to 'master': ignore PRs and other branches
 on:
   push:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   update-hackathon:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/github-script@0.9.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
