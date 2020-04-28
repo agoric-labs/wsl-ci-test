@@ -20,12 +20,7 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          github.git.updateRef({owner: 'agoric-labs', 
-                                repo: 'wsl-ci-test',
-                                ref:  'hackathon',
-                                sha: await github.git.getRef({
-                                   owner: 'agoric-labs',
-                                   repo: 'wsl-ci-test',
-                                   ref: 'heads/master',
-                                }),
-                              });
+          let repo = { owner: 'agoric-labs', repo: 'wsl-ci-test' };
+          let f = await github.git.getRef({ref: 'heads/master', ...repo});
+          let sha = f.object.sha;
+          await github.git.updateRef({ref:  'hackathon', sha, ...repo});
